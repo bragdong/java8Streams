@@ -1,17 +1,22 @@
 package com.technologyconversations.java8exercises.streams;
 
+import static java.util.Arrays.asList;
+
 import java.util.List;
 
-public class Sum {
+public class RunExercise {
 
-    private Sum() {
+    private RunExercise() {
     }
 
+    List<Integer> numbers = asList(1, 2, 3, 4, 5);
+    		
     public static int calculate7(List<Integer> numbers) {
         int total = 0;
         for (int number : numbers) {
             total += number;
         }
+        System.out.println("total = "+total);
         return total;
     }
 

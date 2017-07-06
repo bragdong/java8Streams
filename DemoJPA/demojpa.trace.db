@@ -1,6 +1,0 @@
-2017-06-28 10:48:25 jdbc[12]: exception
-org.h2.jdbc.JdbcSQLException: Table "JOKE" not found; SQL statement:
-select count(*) as col_0_0_ from joke joke0_ [42102-195]
-2017-06-28 10:50:01 jdbc[12]: exception
-org.h2.jdbc.JdbcSQLException: Table "JOKE" not found; SQL statement:
-select count(*) as col_0_0_ from joke joke0_ [42102-195]

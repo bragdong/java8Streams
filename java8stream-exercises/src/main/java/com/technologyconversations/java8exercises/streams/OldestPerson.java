@@ -16,9 +16,9 @@ public class OldestPerson {
     }
 
     public static Person getOldestPerson(List<Person> people) {
-        return people.stream() 
-                .max(Comparator.comparing(Person::getAge)) 
-                .get(); 
+    	Person p = people.stream().max(Comparator.comparing(Person::getAge)).get();
+//    	System.out.println(p.getName()+" "+p.getAge());
+        return people.stream().max(Comparator.comparing(Person::getAge)).get(); 
     }
 
 }

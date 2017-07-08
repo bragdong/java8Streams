@@ -1,6 +1,7 @@
 package com.technologyconversations.java8exercises.streams;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.joining;
 
@@ -23,7 +24,10 @@ public class Joining {
     }
 
     public static String namesToString(List<Person> people) {
-        return null;
+//    	System.out.println(people.stream().map(x->x.getName())
+//				.collect(Collectors.joining(", ", "Names: ", ".")) );
+    	return people.stream().map(x->x.getName())
+				.collect(Collectors.joining(", ", "Names: ", "."));
     }
 
 }

@@ -1,7 +1,9 @@
 package com.technologyconversations.java8exercises.streams;
 
+import java.util.Comparator;
 import java.util.IntSummaryStatistics;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PeopleStats {
 
@@ -22,7 +24,18 @@ public class PeopleStats {
     }
 
     public static IntSummaryStatistics getStats(List<Person> people) {
-        return null;
+    	
+    	double avg = people.stream().mapToDouble( p -> p.getAge()).average().getAsDouble();
+ 	   	
+    	int max = people.stream().max(Comparator.comparing(Person::getAge)).get().getAge();
+
+    	int min = people.stream().min(Comparator.comparing(Person::getAge)).get().getAge();
+
+    	int sum = people.stream().mapToInt(i -> i.getAge()).sum();
+    	
+//		return new IntSummaryStatistics(avg,people.size(),max,min,sum);
+		return null;
+
     }
 
 }

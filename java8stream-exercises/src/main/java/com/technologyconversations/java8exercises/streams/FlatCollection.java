@@ -1,6 +1,7 @@
 package com.technologyconversations.java8exercises.streams;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
@@ -21,7 +22,7 @@ public class FlatCollection {
     }
 
     public static List<String> transform(List<List<String>> collection) {
-        return null;
+        return collection.stream().flatMap((a) -> a.stream()).collect(toList());
     }
 
 }
